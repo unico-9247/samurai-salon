@@ -1,0 +1,255 @@
+/* ----------------------
+共通
+---------------------- */
+
+
+
+
+
+/*  セクションごとに囲む  */
+.wrapper {
+  max-width: 1280px;  /*  横幅最大サイズの指定  */
+  margin: 0 auto;     /*  中央に配置する指定  */
+  padding: 0 4%;      /*  スマートフォン向け余白の指定  */
+}
+
+/* Google Fonts--Merriweather Sans 英語のバックグラウンドタイトル */
+.background-title-font {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+/* Google Fonts--Shippori Mincho 日本語の縦書きタイトル */
+.vertical-title-font {
+  font-family: 'Shippori Mincho', serif;
+}
+
+/* 縦書きにする */
+.vertical-writing-mode {
+  writing-mode: vertical-rl;
+}
+
+/* 太字 */
+.bold {
+  font-weight: 700;
+}
+
+/* 英字の頭文字を大文字に */
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+}
+
+.jc-spcbetween {
+  justify-content: space-between;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+/* inline-block */
+.inline-block {
+  display: inline-block;
+}
+
+/* colors */
+.lightgreen {
+  color: #F0F5E1;
+}
+.grassgreen {
+  color: #96C519;
+}
+.green {
+  color: #1B9240;
+}
+.mossgreen {
+  color: #468459;
+}
+.darkgreen {
+  color: #F0F5E1;
+}
+.white {
+  color: #FFFFFF;
+}
+.black {
+  color: #000000;
+}
+
+/* background-colors */
+.background-green {
+  background-color: #1B9240;
+}
+
+.background-mossgreen {
+  background-color: #468459;
+}
+
+/* title */
+.title {
+  font-size: 2.4rem;
+}
+
+
+/* border */
+.border-right {
+  border-right: dashed 1px #1B9240;
+}
+
+.button-padding {
+  padding-right: 20px;
+}
+
+.title-en {
+  font-size: 2.4rem;
+}
+
+/* submit-button-clear */
+.submit-button-clear {
+  display: inline-block;
+  border: #000000 solid 1px;
+  border-radius: 10px;
+  padding: 3px 15px;
+  margin-top: 30px;
+}
+
+/* submit-button-clear */
+.submit-button2-clear {
+  background-color: transparent;
+  display: inline-block;
+  border: #000000 solid 1px;
+  border-radius: 10px;
+  padding: 3px 15px;
+  margin-top: 30px;
+}
+
+
+/* ----------------------
+セクション
+---------------------- */
+/* header */
+[class*="__nav-list"] {
+  padding: 20px 0;
+  margin-left: 2vw;
+}
+
+/* main-visual */
+.main-visual__text {
+  font-size: 2.8rem;
+}
+
+.main-visual__border-radius {
+  border-radius: 5% 0 0 30%;
+}
+
+/* concept */
+#concept {
+  padding: 0 20%;
+}
+
+.concept__box-left {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.concept__subtitle {
+  font-size: 3.2rem;
+  letter-spacing: 0.54rem;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+/* course */
+.course__container {
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.course__img img {
+  border-radius: 15px;
+}
+
+.course__subtitle {
+  font-size: 2.4rem;
+}
+
+.course__text {
+  font-size: 1.8rem;
+  list-style: disc inside;
+}
+
+/* フッター */
+
+.footer__box {
+  padding: 10px 0;
+  margin: 0 calc(50% - 50vw);
+}
+
+.footer__copyright {
+  font-size: 1.2rem;
+}
+
+
+/* ----------------------
+レスポンシブ　ブレークポイント　基本768px（必要に応じて900px）
+---------------------- */
+/* 900px */
+@media screen and (max-width: 900px) {
+  /* submit-button-clear */
+  .br-none {
+    display: none;
+  }
+ 
+  /* concept */
+  #concept {
+    flex-direction: column-reverse;
+    padding: 0 4%;
+  }
+  
+  .concept__box-left {
+    width: 100%;
+    padding-right: 0px;
+  }
+  
+  /* course */
+  .course__container {
+    flex-direction: column;
+  }
+
+
+  /* footer */
+  .footer__nav-box, .footer__nav-menu {
+    flex-direction: column;
+  }
+
+  .footer__nav-list {
+    color: #1B9240;
+    margin: 0 auto;
+  }
+
+  
+}
+
+/* 700px */
+@media screen and (max-width: 768px) {
+  
+}
