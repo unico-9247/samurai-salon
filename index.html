@@ -18,7 +18,7 @@
   <!-- Google Fonts--Noto Sans JP -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="images/Union.png" type="image/x-icon">
@@ -26,23 +26,26 @@
 </head>
 
 <body>
-  <header class="header flex space-between ai-center wrapper">
+  <header class="header flex ai-center wrapper">
     <h1><a href="index.html" class="logo"><img src="images/Frame 2259.png" alt="SAMURAI整体院"></a></h1>
     <nav class="nav">
       <ul class="header__nav-menu flex">
         <li class="header__nav-list white"><a href="#" class="nav__link">ホーム</a></li>
-        <li class="header__nav-list white"><a href="#" class="nav__link">当院について</a></li>
-        <li class="header__nav-list white"><a href="#" class="nav__link">コース・料金</a></li>
-        <li class="header__nav-list white"><a href="#" class="nav__link">お知らせ</a></li>
-        <li class="header__nav-list white"><a href="#" class="nav__link">お客様の声</a></li>
+        <li class="header__nav-list white"><a href="#concept class="nav__link">当院について</a></li>
+        <li class="header__nav-list white"><a href="#course" class="nav__link">コース・料金</a></li>
+        <li class="header__nav-list white"><a href="#news" class="nav__link">お知らせ</a></li>
+        <li class="header__nav-list white"><a href="#customers-voice" class="nav__link">お客様の声</a></li>
         <li class="header__nav-list white background-green button-padding"><a href="#" class="nav__link">ご予約・お問い合わせ</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="main-visual flex jc-spcbetween">
-    <span class="main-visual__text vertical-title-font vertical-writing-mode green border-right">根本的な症状改善を<br>サポートします</span>
-    <img class="main-visual__border-radius" src="images/TOP-Carouselgroup1.png" alt="整体院店内">
+  <div class="main-visual flex jc-flexend">
+    <div class="main-visual__box vertical-title-font vertical-writing-mode green">
+      <span class="main-visual__text border-right">根本的な症状改善を</span><br>
+      <span class="main-visual__text border-right">サポートします</span>
+    </div>
+    <img class="main-visual__img" src="images/mainvisual-img.png" alt="整体院店内">
   </div>
 
 <section id="news" class="wrapper flex">
@@ -50,7 +53,7 @@
     <h2 class="title-en green bold capitalize">news</h2>
     <h3 class="title-ja green">お知らせ</h3>
   </div>
-  <div class="flex space-between">
+  <div class="flex jc-spcbetween">
     <ul class="news__content flex">
       <li news__list>2022/12/21</li>
       <li news__list>営業日時</li>
@@ -62,11 +65,10 @@
 
 <section id="concept" class="wrapper flex">
   <div class="concept__box-left">
-    <div class="flex ai-center">
-      <img src="images/Union.png" alt="マーク">
-      <h2 class="title-en mossgreen bold capitalize">concept</h2>
+    <div class="title-box">
+      <h2 class="section-title mossgreen bold capitalize icon-left">concept</h2>
+      <h3 class="section-subtitle mossgreen">特徴</h3>
     </div>
-    <h3 class="title-ja mossgreen">特徴</h3>
     <h4 class="concept__subtitle mossgreen">日々変化する<br class="br-none">カラダと心を癒す<br class="br-none">パーソナル<br class="br-none">トレーナーとして</h4>
     <p class="concept__text">当院では、問診にてお客様の症状や生活スタイル、ご希望を丁寧にお伺いした上で施術方針を立てていきます。<br><br>
       また、根本的に症状を改善するために、お客様ご自身で行えるケアやストレッチもお伝えします。<br><br>
@@ -78,44 +80,91 @@
   <div class="concept__box-right">
     <img src="images/Concept-Imagegroup.png" alt="施術の様子">
   </div>
-
 </section>
 
-<section id="course" class="wrapper">
-  <div class="title ta-center">
-    <h2 class="mossgreen bold">コース・料金</h2>
-    <h3 class="mossgreen bold">当院では保険診療、自費診療<br>ともにご対応しております</h3>
-  </div>
-  <div class="course__container flex jc-center ai-center">
-    <div class="course__box">
-      <div class="course__img">
-        <img src="images/TOP-insurance1.png" alt="保険診療の施術室イメージ">
-      </div>
-      <h4 class="course__subtitle mossgreen">保険診療</h4>
-      <ul class="course__list">
-        <li class="course__text">骨折・打撲・捻挫・脱臼</li>
-        <li class="course__text">スポーツ診療</li>
-        <li class="course__text">交通事故</li>
-      </ul>
+<section id="course" class="background-lightgreen">
+  <div class="flame-section-top">
+    <img src="./images/Frame-section-top.png" alt="">
+  </div>  
+  <div class="wrapper">
+    <div class="title-box ta-center">
+      <h2 class="section-title mossgreen bold icon-both">コース・料金</h2>
+      <h3 class="section-subtitle mossgreen bold">当院では保険診療、自費診療<br>ともにご対応しております</h3>
     </div>
-    <div class="course__box">
-      <div class="course__img">
-        <img src="images/TOP-self1.png" alt="自由診療の施術室イメージ">
+    <div class="course__container flex jc-center ai-center">
+      <div class="course__box">
+        <div class="course__img">
+          <img src="images/TOP-insurance1.png" alt="保険診療の施術室イメージ">
+        </div>
+        <h4 class="course__subtitle mossgreen">保険診療</h4>
+        <ul class="course__list">
+          <li class="course__text">骨折・打撲・捻挫・脱臼</li>
+          <li class="course__text">スポーツ診療</li>
+          <li class="course__text">交通事故</li>
+        </ul>
       </div>
-      <h4 class="course__subtitle mossgreen">自由診療</h4>
-      <ul class="course__list">
-        <li class="course__text">腰痛・肩こり</li>
-        <li class="course__text">冷え性・だるさ</li>
-        <li class="course__text">骨盤・背骨調整</li>
-      </ul>
+      <div class="course__box">
+        <div class="course__img">
+          <img src="images/TOP-self1.png" alt="自由診療の施術室イメージ">
+        </div>
+        <h4 class="course__subtitle mossgreen">自由診療</h4>
+        <ul class="course__list">
+          <li class="course__text">腰痛・肩こり</li>
+          <li class="course__text">冷え性・だるさ</li>
+          <li class="course__text">骨盤・背骨調整</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="btn-wrap ta-center">
-    <a class="btn" href="#">→ 当院について</a>
+    <div class="btn-wrap ta-center">
+      <a class="btn" href="#">→ コース・料金詳細について</a>
+    </div>
   </div>
 </section>
 
-  
+
+<section id="customers-voice">
+  <div class="flame-customers-voice">
+    <img src="./images/Frame-customers-voice.png" alt="">
+  </div>  
+  <div class="wrapper">
+    <div class="title-box ta-center">
+      <h2 class="section-title mossgreen bold icon-both">お客様の声</h2>
+      <h3 class="section-subtitle mossgreen bold">痛みの改善に加えて自分で<br>予防できるようになりました</h3>
+    </div>
+    <div class="customers-voice__container flex jc-center ai-center">
+      <div class="customers-voice__box">
+        <div class="customers-voice__img ta-center">
+          <img src="./images/TOP-user1.png" alt="S・K様">
+        </div>
+        <h4 class="customers-voice__subtitle darkgreen bold ta-center">S・K様  30代女性</h4>
+        <p class="customers-voice__text">
+          1ヶ月で腰の痛みが軽減しました。自分で自宅でできるケアも教えていただき、お任せしてよかったです。
+        </p>
+      </div>
+      <div class="customers-voice__box">
+        <div class="customers-voice__img ta-center">
+          <img src="./images/TOP-user2.png" alt="T・M様">
+        </div>
+        <h4 class="customers-voice__subtitle darkgreen bold ta-center">S・K様  30代女性</h4>
+        <p class="customers-voice__text">
+          マラソンで右膝が痛むので、施術を受けています。なぜ痛みが生じるのかを身体の仕組みから教えていただき、普段の練習メニューも工夫できています。
+        </p>
+      </div>
+      <div class="customers-voice__box">
+        <div class="customers-voice__img ta-center">
+          <img src="./images/TOP-user3.png" alt="S・T様">
+        </div>
+        <h4 class="customers-voice__subtitle darkgreen bold ta-center">S・K様  30代女性</h4>
+        <p class="customers-voice__text">
+          転倒して足を骨折したのをきっかけに、痛みの軽減と筋肉の衰えを防ぐための方針を立てていただいています。今は毎日元気に近所を散歩できています。
+        </p>
+      </div>
+    </div>
+    <div class="btn-wrap ta-center">
+      <a class="btn" href="#">→ お客様の声一覧へ</a>
+    </div>
+  </div>
+</section>  
 
 <footer class="footer wrapper">
   <div class="footer__nav-box flex ai-center">
