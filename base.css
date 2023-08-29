@@ -100,7 +100,7 @@ html {
 body {
   height: 100%;
   font-family: 'Noto Sans JP', sans-serif; /* Google Fonts--Noto Sans JP ベースのフォント */
-  font-size: 1.6rem; /* サイト全体の文字サイズを14pxにする場合 */
+  font-size: 1.6rem; /* サイト全体の文字サイズを16pxにする */
   line-height: 1.5; /* 行の高さ */
   color: #000; /* 文字色 */
   letter-spacing: 0.05em; /* 文字の間隔 */
