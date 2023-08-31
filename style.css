@@ -1,16 +1,15 @@
 /* ----------------------
 共通
 ---------------------- */
-
-
-
-
-
 /*  セクションごとに囲む  */
 .wrapper {
   max-width: 1280px;  /*  横幅最大サイズの指定  */
-  margin: 90px auto;     /*  中央に配置・セクション上部に余白の指定  */
-  padding: 0 4%;      /*  スマートフォン向け余白の指定  */
+  margin: 50px 4% 0; /* 中央に配置・セクション上部に余白の指定 */
+}
+
+.wrapper-no-margin {
+  max-width: 1024px;
+  margin: 0 4%;
 }
 
 /* Google Fonts--Merriweather Sans 英語のバックグラウンドタイトル */
@@ -156,7 +155,6 @@
   vertical-align: middle;
 }
 
-
 /* border */
 .border-right {
   border-right: dashed 1px #1B9240;
@@ -187,7 +185,10 @@
   margin-top: 30px;
 }
 
-
+/* セクション上部の画像 */
+.flame-section-top img {
+  width: 100%;
+}
 
 /* ----------------------
 セクション
@@ -197,8 +198,8 @@
   /* ヘッダーを上部に固定（浮いた分mainvisualが上に持ち上がる） */
   position: fixed;
   z-index: 10;
+  width: 100%;
 }
-
 
 [class*="__nav-list"] {
   padding: 20px 0;
@@ -206,7 +207,7 @@
 }
 
 /* main-visual */
-.main-visual {
+.main-visual__container {
   position: relative;
   z-index: 0;
 }
@@ -222,13 +223,8 @@
   font-size: 2.8rem;
 }
 
-/* concept */
-#concept {
-  padding: 0 20%;
-}
-
 .concept__box-left {
-  width: 50%;
+  width: 40%;
   padding-right: 20px;
 }
 
@@ -240,11 +236,11 @@
 }
 
 /* course */
-#course {
+.course__container {
   padding-bottom: 50px;
 }
 
-.course__container {
+.course__bigbox {
   gap: 40px;
   margin-top: 40px;
 }
@@ -264,6 +260,10 @@
 
 /* customers-voice */
 .customers-voice__container {
+  padding-bottom: 30px;
+}
+
+.customers-voice__bigbox {
   margin-top: 50px;
 }
 
@@ -292,11 +292,15 @@
 
 /* access */
 .access__container {
+  padding-bottom: 50px;
+}
+
+.access__bigbox {
   margin-top: 20px;
 }
 
 .access__box-left, .access__box-right {
-  width: 50%;
+  width: 45%;
 }
 
 /* 必要ないかも？ */
@@ -356,30 +360,7 @@
     display: none;
   }
  
-  /* concept */
-  #concept {
-    flex-direction: column-reverse;
-    padding: 0 4%;
-  }
   
-  .concept__box-left {
-    width: 100%;
-    padding-right: 0px;
-  }
-
-  .concept__box-left > .btn-wrap {
-    text-align: center;
-  }
-
-  .concept__box-right {
-    text-align: center;
-  }
-  
-  /* course */
-  .course__container {
-    flex-direction: column;
-  }
-
   /* footer */
   .footer__nav-box, .footer__nav-menu {
     flex-direction: column;
@@ -396,8 +377,31 @@
 /* 700px */
 @media screen and (max-width: 768px) {
 
+  /* concept */
+  .concept__bigbox {
+    flex-direction: column-reverse;
+  }
+  
+  .concept__box-left {
+    width: 100%;
+    padding-right: 0px;
+  }
+
+  .concept__box-left > .btn-wrap {
+    text-align: center;
+  }
+
+  .concept__box-right {
+    text-align: center;
+  }
+
+  /* course */
+  .course__bigbox {
+    flex-direction: column;
+  }
+
   /* customers-voice */
-  .customers-voice__container {
+  .customers-voice__bigbox {
     flex-direction: column;
   }
 
@@ -410,7 +414,7 @@
   }
   
   /* access */
-  .access__container {
+  .access__bigbox {
     flex-direction: column;
   }
 
