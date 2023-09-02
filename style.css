@@ -13,13 +13,18 @@
 }
 
 /* Google Fonts--Merriweather Sans 英語のバックグラウンドタイトル */
-.background-title-font {
+.bg-title-font {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
 /* Google Fonts--Shippori Mincho 日本語の縦書きタイトル */
 .vertical-title-font {
   font-family: 'Shippori Mincho', serif;
+}
+
+/* 一番下に配置 */
+.z-index-0 {
+  z-index: 0;
 }
 
 /* 縦書きにする */
@@ -112,7 +117,7 @@
   margin-bottom: 40px;
 }
 
-.section-title, .section-subtitle {
+.section-title {
   font-size: 2.4rem;
 }
 
@@ -152,6 +157,11 @@
   background-repeat: no-repeat;
   background-size: contain;
   vertical-align: middle;
+}
+
+.section-subtitle {
+  font-size: 2.4rem;
+  margin-top: 20px;
 }
 
 /* border */
@@ -222,18 +232,6 @@
   font-size: 2.8rem;
 }
 
-.concept__box-left {
-  width: 40%;
-  padding-right: 20px;
-}
-
-.concept__subtitle {
-  font-size: 3.2rem;
-  letter-spacing: 0.54rem;
-  font-weight: 700;
-  margin: 20px 0;
-}
-
 /* news */
 .news__list + .news__list {
   margin-left: 2vw;
@@ -244,14 +242,75 @@
   border-radius: 5px;
 }
 
+/* concept */
+.concept__container {
+  padding-bottom: 60px;
+}
+
+.concept__bigbox {
+  position: relative;
+}
+
+.concept__bg-img-green {  /* 背景の画像 */
+  background-image: url(./images/BGicon_Green.png);
+  background-repeat: no-repeat;
+  background-size: auto 336px;
+  background-position: right -70px bottom 0px;
+  background-color:rgba(255,255,255,0.25);
+  background-blend-mode:lighten;
+}
+
+
+.concept__box-left {
+  width: 40%;
+  padding-right: 20px;
+}
+
+.concept__subtitle {
+  font-size: 3.2rem;
+  letter-spacing: 0.54rem;
+  font-weight: 700;
+  margin: 20px 0;
+  z-index: 10;
+}
+
+.concept__bg-text {
+  font-size: 134px;
+  color: #DAE2C2;
+  opacity: 0.25;
+  position: absolute;
+  top: 110px;
+  left: 20px;
+}
+
 /* course */
 .course__container {
   padding-bottom: 50px;
 }
 
+.course__relative {
+  position: relative;
+}
+
+.course__bg-text {
+  font-size: 134px;
+  color: #DAE2C2;
+  opacity: 0.75;
+  position: absolute;
+  top: 110px;
+  left: 20px;
+}
+
 .course__bigbox {
   gap: 40px;
   margin-top: 40px;
+}
+
+.course__bg-img-green {  /* 背景の画像 */
+  background-image: url(./images/BGicon_Green.png);
+  background-repeat: no-repeat;
+  background-size: auto 336px;
+  background-position: right -70px bottom 0px;
 }
 
 .course__img img {
@@ -277,6 +336,7 @@
 .voice__flame img {
   height: 320px;
   object-fit: cover;
+  object-position: bottom;
 }
 
 .voice__absolute {
@@ -362,7 +422,6 @@
   height: 350px;
 }
 
-
 /* フッター */
 .footer__box {
   padding: 10px 0;
@@ -377,13 +436,21 @@
 /* ----------------------
 レスポンシブ　ブレークポイント　基本768px（必要に応じて900px）
 ---------------------- */
-/* 900px */
+/* 768pxより大きい */
+@media screen and (min-width: 769px) {
+  /* voice */
+  .voice__flame-sp {
+    display: none;
+  }
+}
+
+
+/* 900pxより小さい */
 @media screen and (max-width: 900px) {
   /* submit-button-clear */
   .br-none {
     display: none;
   }
- 
   
   /* footer */
   .footer__nav-box, .footer__nav-menu {
@@ -395,13 +462,16 @@
     margin: 0 auto;
   }
 
-  
 }
 
-/* 700px */
+/* 768pxより小さい */
 @media screen and (max-width: 768px) {
-
   /* concept */
+  .concept__bg-img-green {  /* 背景の画像 */
+    background-size: auto 175px;
+    background-position: right -70px bottom 0px;
+  }
+  
   .concept__bigbox {
     flex-direction: column-reverse;
   }
@@ -415,16 +485,37 @@
     text-align: center;
   }
 
+  .concept__bg-text {
+    font-size: 72px;
+    top: 460px;
+    left: -40px;
+  }
+
   .concept__box-right {
     text-align: center;
   }
 
   /* course */
+  .course__bg-text {
+    font-size: 72px;
+    top: 70px;
+    left: -40px;
+  }
+
   .course__bigbox {
     flex-direction: column;
   }
 
+  .course__bg-img-green {  /* 背景の画像 */
+    background-size: auto 175px;
+    background-position: right -70px bottom 0px;
+  }
+
   /* voice */
+  .voice__flame-pc {
+    display: none;
+  }  
+
   .voice__bigbox {
     flex-direction: column;
   }
