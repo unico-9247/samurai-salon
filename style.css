@@ -8,7 +8,7 @@
 }
 
 .wrapper-no-margin {
-  max-width: 1024px;
+  max-width: 1280px;
   margin: 0 4%;
 }
 
@@ -45,27 +45,21 @@
 .jc-spcbetween {
   justify-content: space-between;
 }
-
 .jc-center {
   justify-content: center;
 }
-
 .jc-flexend {
   justify-content: flex-end;
 }
-
 .ai-center {
   align-items: center;
 }
-
 .ta-center {
   text-align: center;
 }
-
 .ta-right {
   text-align: right;
 }
-
 .fd-column {
   flex-direction: column;
 }
@@ -120,6 +114,11 @@
 
 .section-title, .section-subtitle {
   font-size: 2.4rem;
+}
+
+.section-title-small {
+  font-size: 18px;
+  margin-left: 10px;
 }
 
 .icon-left::before {
@@ -235,6 +234,16 @@
   margin: 20px 0;
 }
 
+/* news */
+.news__list + .news__list {
+  margin-left: 2vw;
+}
+
+.op-hrs-tag {
+  padding: 2px 16px;
+  border-radius: 5px;
+}
+
 /* course */
 .course__container {
   padding-bottom: 50px;
@@ -258,35 +267,50 @@
   list-style: disc inside;
 }
 
-/* customers-voice */
-.customers-voice__container {
+/* voice */
+.voice__container {
   padding-bottom: 30px;
+  position: relative;
+  /* height: 900px; */
 }
 
-.customers-voice__bigbox {
+.voice__flame img {
+  height: 320px;
+  object-fit: cover;
+}
+
+.voice__absolute {
+  position: absolute;
+  top: 280px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.voice__bigbox {
   margin-top: 50px;
 }
 
-.customers-voice__box {
+.voice__box {
   width: 33.3%;
   /* width: calc((100%-30px)/3); */
 }
 
-.customers-voice__box + .customers-voice__box {
+.voice__box + .voice__box {
   margin-left: 2%;
 }
 
-.customers-voice__subtitle {
+.voice__subtitle {
   font-size: 2.4rem;
   margin-top: 20px;
 }
 
-.customers-voice__text {
+.voice__text {
   font-size: 1.8rem;
   margin-top: 10px;
 }
 
-.customers-voice__img img {
+.voice__img img {
   border-radius: 50%;
 }
 
@@ -400,16 +424,16 @@
     flex-direction: column;
   }
 
-  /* customers-voice */
-  .customers-voice__bigbox {
+  /* voice */
+  .voice__bigbox {
     flex-direction: column;
   }
 
-  .customers-voice__box {
+  .voice__box {
     width: 100%;
   }
 
-  .customers-voice__box + .customers-voice__box {
+  .voice__box + .voice__box {
     margin: 40px 0 0 0;
   }
   

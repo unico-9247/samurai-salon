@@ -104,7 +104,7 @@ body {
   line-height: 1.5; /* 行の高さ */
   color: #000; /* 文字色 */
   letter-spacing: 0.05em; /* 文字の間隔 */
-  background-color: #fafafa; /* 背景色 */
+  background-color: #fff; /* 背景色 */
 }
 
 /* imgは初期値だと親要素の幅を超えて表示されてしまうので、
