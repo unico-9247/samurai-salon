@@ -34,7 +34,7 @@
 
 /* 太字 */
 .bold {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* 英字の頭文字を大文字に */
@@ -107,6 +107,9 @@
 .background-mossgreen {
   background-color: #468459;
 }
+.background-darkgreen {
+  background-color: #0C4324;
+}
 .background-white {
   background-color: #FFFFFF;
 }
@@ -122,7 +125,7 @@
 }
 
 .section-title-small {
-  font-size: 18px;
+  font-size: 1.8rem;
   margin-left: 10px;
 }
 
@@ -135,6 +138,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   vertical-align: middle;
+  margin-right: 5px;
 }
 
 .icon-both::before {
@@ -146,6 +150,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   vertical-align: middle;
+  margin-right: 18px;
 }
 
 .icon-both::after {
@@ -157,6 +162,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   vertical-align: middle;
+  margin-left: 18px;
 }
 
 .section-subtitle {
@@ -169,8 +175,10 @@
   border-right: dashed 1px #1B9240;
 }
 
-.button-padding {
-  padding-right: 20px;
+.header__nav-btn {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .course__subtitle {
@@ -184,6 +192,7 @@
   border-radius: 10px;
   padding: 3px 15px;
   margin-top: 30px;
+  font-weight: 1.4rem;
 }
 
 /* button-green */
@@ -208,6 +217,10 @@
   position: fixed;
   z-index: 10;
   width: 100%;
+}
+
+.header__nav-menu {
+  font-size: 1.4rem;
 }
 
 [class*="__nav-list"] {
@@ -247,6 +260,10 @@
   font-size: 1.4rem;
 }
 
+.news__link {
+  font-size: 1.4rem;
+}
+
 /* concept */
 .concept__container {
   padding-bottom: 60px;
@@ -265,7 +282,6 @@
   background-blend-mode:lighten;
 }
 
-
 .concept__box-left {
   width: 40%;
   padding-right: 20px;
@@ -274,7 +290,6 @@
 .concept__subtitle {
   font-size: 3.2rem;
   letter-spacing: 0.54rem;
-  font-weight: 700;
   margin: 20px 0;
   z-index: 10;
 }
@@ -356,8 +371,7 @@
 }
 
 .voice__box {
-  width: 33.3%;
-  /* width: calc((100%-30px)/3); */
+  width: calc((100% - 30px) / 3);
 }
 
 .voice__box + .voice__box {
@@ -391,6 +405,10 @@
   width: 45%;
 }
 
+.access__address, .access__tel, .access__op-hrs {
+  margin-top: 16px;
+}
+
 /* 必要ないかも？ */
 .access__box-left {
   margin: 0 auto;
@@ -413,12 +431,12 @@
 }
 
 .access__op-hrs-row:nth-child(3) {
-  background-color: #ECECEC;
+  background-color: #DDDDDD;
 }
 
 .access__op-hrs-content {
   padding: 15px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #ECECEC;
 }
 
 .access__map {
@@ -452,7 +470,7 @@
 /* 900pxより小さい */
 @media screen and (max-width: 900px) {
   /* submit-button-clear */
-  .br-none {
+  .pc-br {
     display: none;
   }
   
@@ -470,6 +488,60 @@
 
 /* 768pxより小さい */
 @media screen and (max-width: 768px) {
+  /* ----------------------
+  共通
+  ---------------------- */
+  .title-box {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+    
+  .icon-both::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image:url(./images/Head_02_DecoLeft16.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: 18px;
+  }
+  
+  .icon-both::after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image:url(./images/Head_02_DecoRight16.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-left: 18px;
+  }
+  
+  .section-subtitle {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+
+  /* button-clear */
+  .btn {
+    display: inline-block;
+    border: #0C4324 solid 1px;
+    border-radius: 10px;
+    padding: 3px 15px;
+    margin-top: 30px;
+    font-weight: 1.4rem;
+    color: #0C4324;
+  }
+  
+  /* ----------------------
+  セクション
+  ---------------------- */
   /* news */
   .news__box-outer {
     flex-direction: column;
@@ -491,8 +563,9 @@
   }
 
   /* うまく機能しない。「お知らせ一覧へ」の文字を右寄せしたい */
-  .news__link a {
+  .news__link {
     text-align: right;
+    color: #0C4324;
   }
 
   /* concept */
@@ -510,8 +583,16 @@
     padding-right: 0px;
   }
 
+  .concept__box-left > .title-box > .section-title {
+    font-size: 2.4rem;
+  }
+
   .concept__box-left > .btn-wrap {
     text-align: center;
+  }
+
+  .concept__subtitle {
+    font-size: 2.4rem;
   }
 
   .concept__bg-text {
@@ -568,11 +649,26 @@
 
   .access__box-right {
     margin-top: 50px;
-  }  
+  } 
+
+  .access__tel {
+    font-size: 1.8rem;
+  }
 
   .access__map {
     width: 100%;
     height: 250px;
+  }
+
+  .access__btn {
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+  }
+
+ /* footer */
+  .footer__nav-menu {
+    color: #0C4324;
   }
   
 }
