@@ -237,9 +237,14 @@
   margin-left: 2vw;
 }
 
+.news__text {
+  margin-left: 4vw;
+}
+
 .op-hrs-tag {
   padding: 2px 16px;
   border-radius: 5px;
+  font-size: 1.4rem;
 }
 
 /* concept */
@@ -330,7 +335,6 @@
 .voice__container {
   padding-bottom: 30px;
   position: relative;
-  /* height: 900px; */
 }
 
 .voice__flame img {
@@ -466,6 +470,31 @@
 
 /* 768pxより小さい */
 @media screen and (max-width: 768px) {
+  /* news */
+  .news__box-outer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news__list + .news__list{
+    margin-left: 0;
+  }
+
+  .news__content {
+    flex-direction: column;
+    width: 45%;
+  }
+
+  /* レスポンシブにした時に */
+  .news__text {
+    width: 100%;
+  }
+
+  /* うまく機能しない。「お知らせ一覧へ」の文字を右寄せしたい */
+  .news__link a {
+    text-align: right;
+  }
+
   /* concept */
   .concept__bg-img-green {  /* 背景の画像 */
     background-size: auto 175px;
