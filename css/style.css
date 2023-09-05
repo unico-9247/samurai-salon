@@ -4,12 +4,14 @@
 /*  セクションごとに囲む  */
 .wrapper {
   max-width: 1280px;  /*  横幅最大サイズの指定  */
-  margin: 50px 4% 0; /* 中央に配置・セクション上部に余白の指定 */
+  margin: 50px auto 0; /* 中央に配置・セクション上部に余白の指定 */
+  padding: 0 4%;
 }
 
-.wrapper-no-margin {
+.wrapper-no-topmargin {
   max-width: 1280px;
-  margin: 0 4%;
+  margin: 0 auto;
+  padding: 0 4%;
 }
 
 /* Google Fonts--Merriweather Sans 英語のバックグラウンドタイトル */
@@ -459,6 +461,18 @@
   font-size: 1.2rem;
 }
 
+/* ----------------------
+jQueryの指定(PC)
+---------------------- */
+/* TOPに戻るボタン */
+#page-top {
+  position: fixed;
+  bottom: 128px;
+  right: 34px;
+  width: 64px;
+  opacity: 0.8;
+}
+
 
 /* ----------------------
 レスポンシブ　ブレークポイント　基本768px（必要に応じて900px）
@@ -675,5 +689,16 @@
   .footer__nav-menu {
     color: #0C4324;
   }
+
+  /* ----------------------
+jQueryの指定(SP)
+---------------------- */
+/* TOPに戻るボタン */
+#page-top {
+  bottom: 70px;
+  right: 23px;
+  width: 48px;
+}
+
   
 }

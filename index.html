@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="SAMURAI整体院のウェブサイトです">
   <title>SAMURAI整体院</title>
-  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="./css/base.css">
 
   <!-- Google Fonts--Merriweather Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="images/Union.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./images/Union.png" type="image/x-icon">
 
 </head>
 
@@ -154,7 +154,7 @@
         <img class="voice__flame-pc" src="./images/Bottom-Carouselgroup1.png" alt="施術の様子">
         <img class="voice__flame-sp" src="./images/SP-Bottom-Carouselgroup1.png" alt="施術の様子">
       </div>
-      <div class="wrapper-no-margin">
+      <div class="wrapper-no-topmargin">
         <div class="voice__absolute ta-center">
           <h2 class="section-title mossgreen bold icon-both">お客様の声</h2>
         </div>
@@ -264,7 +264,7 @@
 
 <footer class="footer">
   <div class="background-lightgreen">
-    <div class="wrapper-no-margin">
+    <div class="wrapper-no-topmargin">
       <div class="footer__nav-box flex ai-center">
         <h2><a href="index.html" class="footer__logo"><img src="images/Frame 2259.png" alt="SAMURAI整体院"></a></h2>
         <nav class="footer-nav">
@@ -291,8 +291,13 @@
   </a>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./script.js"></script>
+<!-- jQueryをCDN経由で読み込む -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<!-- slickをCDN経由で読み込む -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- JSファイルを読み込む-->
+<script src="./js/script.js"></script>
 
 </body>
 </html>

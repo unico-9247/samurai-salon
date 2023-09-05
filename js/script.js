@@ -1,4 +1,5 @@
 $(function() {
+
   const pagetop = $('#page-top');
   // ボタン非表示
   pagetop.hide();
@@ -15,4 +16,5 @@ $(function() {
     $('body, html').animate({scrollTop: 0}, 500);
     return false;
   });
+
 });
