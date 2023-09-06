@@ -22,7 +22,10 @@
 
   <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" href="./images/Union.png" type="image/x-icon">
-
+  
+  <!-- slickの読み込み -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 
 <body>
@@ -30,6 +33,7 @@
     <div>
       <div class="flex ai-center jc-spcbetween">
         <h1><a href="index.html" class="logo"><img src="images/Frame 2259.png" alt="SAMURAI整体院"></a></h1>
+        <!-- nav-pc -->
         <nav class="nav">
           <ul class="header__nav-menu flex">
             <li class="header__nav-list white"><a href="#" class="nav__link">ホーム</a></li>
@@ -40,6 +44,22 @@
             <li class="header__nav-list white header__nav-btn background-darkgreen"><a href="#access" class="nav__link">ご予約・お問い合わせ</a></li>
           </ul>
         </nav>
+
+        <!-- nav-sp-button -->
+        <img src="./images/SP_MenuDefault.png" alt="ナビゲーションを開く" class="js-humburger">
+
+        <!-- nav-sp -->
+        <nav class="nav-sp">
+          <ul class="header__nav-menu">
+            <li class="header__nav-list white"><a href="#" class="nav__link">ホーム</a></li>
+            <li class="header__nav-list white"><a href="#concept" class="nav__link">当院について</a></li>
+            <li class="header__nav-list white"><a href="#course" class="nav__link">コース・料金</a></li>
+            <li class="header__nav-list white"><a href="#news" class="nav__link">お知らせ</a></li>
+            <li class="header__nav-list white"><a href="#voice" class="nav__link">お客様の声</a></li>
+            <li class="header__nav-list white header__nav-btn background-darkgreen"><a href="#access" class="nav__link">ご予約・お問い合わせ</a></li>
+          </ul>
+        </nav>
+
       </div>
     </div>
   </header>
@@ -53,6 +73,62 @@
       <img class="main-visual__img" src="images/mainvisual-img.png" alt="整体院店内">
     </div>
   </div>
+
+  <!-- carousel -->
+  <section id="carousel">
+    <!-- カルーセル pc -->
+    <div>
+      <div class="carousel__container-pc">
+        <div>
+          <a href="#">
+            <img src="./images/TOP_Carousel1.png" class="carousel__img-pc" alt="店内の様子">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="./images/TOP_Carousel2.png" class="carousel__img-pc" alt="店内の様子">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="./images/TOP_Carousel3.png" class="carousel__img-pc" alt="店内の様子">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="./images/TOP_Carousel4.png" class="carousel__img-pc" alt="店内の様子">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- カルーセル sp -->
+    <div>
+      <div class="carousel__container-sp">
+        <div>
+          <a href="#">
+            <img src="./images/SP_TOP_Carousel1.png" class="carousel__img-sp" alt="店内の様子">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="./images/SP_TOP_Carousel2.png" class="carousel__img-sp" alt="店内の様子">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="./images/SP_TOP_Carousel3.png" class="carousel__img-sp" alt="店内の様子">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="./images/SP_TOP_Carousel4.png" class="carousel__img-sp" alt="店内の様子">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
 <section id="news">
   <div>

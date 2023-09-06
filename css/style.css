@@ -201,6 +201,13 @@
   font-weight: 1.4rem;
 }
 
+.btn:hover {
+  border: #1B9240 solid 1px;
+  color: #FFFFFF;
+  background-color: #1B9240;
+}
+
+
 /* button-green */
 .btn-green {
   display: inline-block;
@@ -233,6 +240,11 @@
 [class*="__nav-list"] {
   padding: 20px 0;
   margin-left: 2vw;
+}
+
+/* header js */
+.js-humberger {
+  
 }
 
 /* main-visual */
@@ -479,6 +491,11 @@ jQueryの指定(PC)
 ---------------------- */
 /* 768pxより大きい */
 @media screen and (min-width: 769px) {
+  /* carousel */
+  .carousel__img-sp {
+    display: none;
+  }
+  
   /* voice */
   .voice__flame-sp {
     display: none;
@@ -561,6 +578,10 @@ jQueryの指定(PC)
   /* ----------------------
   セクション
   ---------------------- */
+  .carousel__container-pc {
+    display: none;
+  }
+  
   /* news */
   .news__box-outer {
     flex-direction: column;
