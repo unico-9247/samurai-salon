@@ -5,13 +5,13 @@ $(function() {
   pagetop.hide();
   // 100px スクロールしたらボタン表示
   $(window).scroll(function() {
-    if(($this).scrollTop() > 100) {
+    if($(this).scrollTop() > 100) {
       pagetop.fadeIn();
     } else {
       pagetop.fadeOut();
     }
   });
-
+  // クリックしたらスムーススクロールでTOPに戻る
   pagetop.click(function() {
     $('body, html').animate({scrollTop: 0}, 500);
     return false;
@@ -22,8 +22,9 @@ $(function() {
     autoplay: true,
     dots: true,
     infinite: true,
-    autoplaySpeed: 5000,
-    arrows: false
+    autoplaySpeed: 3000,
+    arrows: true,
+    fade: true,
     });
 
   // ハンバーガーメニュー

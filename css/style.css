@@ -136,7 +136,7 @@
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image:url(./images/Union.png);
+  background-image:url(../images/Union.png);
   background-repeat: no-repeat;
   background-size: contain;
   vertical-align: middle;
@@ -148,7 +148,7 @@
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image:url(./images/Head_02_DecoLeft16.png);
+  background-image:url(../images/Head_02_DecoLeft16.png);
   background-repeat: no-repeat;
   background-size: contain;
   vertical-align: middle;
@@ -160,7 +160,7 @@
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image:url(./images/Head_02_DecoRight16.png);
+  background-image:url(../images/Head_02_DecoRight16.png);
   background-repeat: no-repeat;
   background-size: contain;
   vertical-align: middle;
@@ -221,6 +221,11 @@
   width: 100%;
 }
 
+/* PC画面で非表示 */
+.sp {
+  display: none;
+}
+
 /* ----------------------
 セクション
 ---------------------- */
@@ -243,28 +248,37 @@
 }
 
 /* header js */
-.js-humberger {
-  
-}
 
-/* main-visual */
-.main-visual__container {
+
+
+/* carousel */
+.carousel__outer {
   position: relative;
   z-index: 0;
 }
 
-.main-visual__box {
-  background-image: url(./images/mainvisual-text-bg.png);
+.carousel__box {
+  /* background-image: url(../images/mainvisual-text-bg.png); */
   position: absolute;
-  top: 90px;
+  top: 150px;
   left: 90px;
+  z-index: 5;
 }
 
-.main-visual__text {
+.carousel__text {
   font-size: 2.8rem;
+  letter-spacing: 0.5rem;
 }
 
 /* news */
+.news__title {
+  display: inline-block;
+}
+
+.news__box-inner {
+  width: 100%;
+}
+
 .news__list + .news__list {
   margin-left: 2vw;
 }
@@ -281,6 +295,7 @@
 
 .news__link {
   font-size: 1.4rem;
+  margin-left: auto;
 }
 
 /* concept */
@@ -293,7 +308,7 @@
 }
 
 .concept__bg-img-green {  /* 背景の画像 */
-  background-image: url(./images/BGicon_Green.png);
+  background-image: url(../images/BGicon_Green.png);
   background-repeat: no-repeat;
   background-size: auto 336px;
   background-position: right -70px bottom 0px;
@@ -346,7 +361,7 @@
 }
 
 .course__bg-img-green {  /* 背景の画像 */
-  background-image: url(./images/BGicon_Green.png);
+  background-image: url(../images/BGicon_Green.png);
   background-repeat: no-repeat;
   background-size: auto 336px;
   background-position: right -70px bottom 0px;
@@ -491,10 +506,7 @@ jQueryの指定(PC)
 ---------------------- */
 /* 768pxより大きい */
 @media screen and (min-width: 769px) {
-  /* carousel */
-  .carousel__img-sp {
-    display: none;
-  }
+
   
   /* voice */
   .voice__flame-sp {
@@ -574,10 +586,21 @@ jQueryの指定(PC)
     font-weight: 1.4rem;
     color: #0C4324;
   }
+
+  /* スマホ画面で表示および非表示 */
+  .sp {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
   
   /* ----------------------
   セクション
   ---------------------- */
+
+
   .carousel__container-pc {
     display: none;
   }
