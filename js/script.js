@@ -32,4 +32,8 @@ $(function() {
     $('.js-humberger, .nav-sp').toggleClass('show');
   })
 
+  $(".openbtn1").click(function () {
+    $(this).toggleClass('active');
+});
+
 });

@@ -31,11 +31,11 @@
 <body>
   <header class="header">
     <div>
-      <div class="flex ai-center jc-spcbetween">
+      <div class="header__outer flex ai-center jc-spcbetween">
         <h1><a href="index.html" class="logo"><img src="images/Frame 2259.png" alt="SAMURAI整体院"></a></h1>
         <!-- nav-pc -->
-        <nav class="header__nav-pc">
-          <ul class="header__nav-menu flex">
+        <nav class="header__nav-pc pc">
+          <ul class="header__nav-menu flex jc-spcbetween">
             <li class="header__nav-list white"><a href="#" class="nav__link">ホーム</a></li>
             <li class="header__nav-list white"><a href="#concept" class="nav__link">当院について</a></li>
             <li class="header__nav-list white"><a href="#course" class="nav__link">コース・料金</a></li>
@@ -47,9 +47,11 @@
 
         <!-- nav-sp-button -->
         <img src="./images/SP_MenuDefault.png" alt="ナビゲーションを開く" class="js-humburger">
+        <div class="openbtn1"><span></span><span></span><span></span></div>
+        <p class="lead">5-2-1<br>3本線が×に</p>
 
         <!-- nav-sp -->
-        <nav class="header_nav-sp">
+        <nav class="header_nav-sp sp">
           <ul class="header__nav-menu">
             <li class="header__nav-list white"><a href="#" class="nav__link">ホーム</a></li>
             <li class="header__nav-list white"><a href="#concept" class="nav__link">当院について</a></li>
@@ -169,7 +171,7 @@
           </div>
           <h4 class="concept__subtitle mossgreen bold">日々変化する<br class="pc-br">カラダと心を癒す<br class="pc-br">パーソナル<br class="pc-br">トレーナーとして</h4>
           <div class="concept__bg-text bg-title-font">
-            <span class="capitalize z-index-0">concept</span>
+            <span class="capitalize">concept</span>
           </div>
           <p class="concept__text">当院では、問診にてお客様の症状や生活スタイル、ご希望を丁寧にお伺いした上で施術方針を立てていきます。<br><br>
             また、根本的に症状を改善するために、お客様ご自身で行えるケアやストレッチもお伝えします。<br><br>
@@ -192,13 +194,10 @@
       <div class="flame-section-top">
         <img src="./images/Frame-section-top.png" alt="">
       </div>  
-      <div class="wrapper course__bg-img-green">
-        <div class="title-box ta-center course__relative">
+      <div class="wrapper course__bg-img-green course__relative">
+        <div class="title-box ta-center">
           <h2 class="section-title mossgreen bold icon-both">コース・料金</h2>
           <h3 class="section-subtitle mossgreen bold">当院では保険診療、自費診療<br>ともにご対応しております</h3>
-          <div class="course__bg-text bg-title-font">
-            <span class="capitalize z-index-0">course</span>
-          </div>
         </div>
         <div class="course__bigbox flex jc-center ai-center">
           <div class="course__box">
@@ -223,6 +222,9 @@
               <li class="course__text">骨盤・背骨調整</li>
             </ul>
           </div>
+        </div>
+        <div class="course__bg-text bg-title-font">
+          <span class="capitalize">course</span>
         </div>
         <div class="btn-wrap ta-center">
           <a class="btn" href="#">→ コース・料金詳細について</a>
@@ -350,7 +352,7 @@
 <footer class="footer">
   <div class="background-lightgreen">
     <div class="wrapper-no-topmargin">
-      <div class="footer__nav-box flex ai-center">
+      <div class="footer__nav-box flex ai-center jc-center">
         <h2><a href="index.html" class="footer__logo"><img src="images/Frame 2259.png" alt="SAMURAI整体院"></a></h2>
         <nav class="footer-nav">
           <ul class="footer__nav-menu flex">
