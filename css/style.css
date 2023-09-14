@@ -350,6 +350,11 @@
   position: relative;
 }
 
+.course__box {
+  position: relative;
+  z-index: 10;
+}
+
 .course__bg-text {
   font-size: 134px;
   color: #DAE2C2;
@@ -357,6 +362,7 @@
   position: absolute;
   top: 110px;
   left: 20px;
+  z-index: 1;
 }
 
 .course__bigbox {
@@ -462,7 +468,7 @@
 
 .access__op-hrs {
   font-size: 1.4rem;
-  display: block;
+  display: inline-block;
   border-collapse: collapse;
   overflow-x: scroll; /* 画面幅に収まらない場合、横スクロール */
   border-radius: 10px;
@@ -782,6 +788,11 @@ opacity: 0;/*真ん中の線は透過*/
   .access__tel {
     font-size: 1.8rem;
   }
+
+  .access__op-hrs {
+    display: block;
+  }
+  
 
   .access__map {
     width: 100%;
