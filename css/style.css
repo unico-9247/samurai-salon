@@ -260,9 +260,13 @@
 .carousel__box {
   background-image: url(../images/mainvisual-text-bg.png);
   position: absolute;
-  top: 150px;
-  left: 90px;
+  top: 120px;
+  left: 80px;
   z-index: 5;
+  padding: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 .carousel__text {
@@ -610,17 +614,36 @@ jQueryの指定(PC)
   セクション
   ---------------------- */
 
+  /* header */
+  .header {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .header__outer {
+    flex-direction: column;
+  }
+
+  .header__nav-menu {
+    flex-direction: column;
+  }
+
+  .header__nav-list {
+    color: #000;
+  }
+
+
   /*==================================================
 　5-2-1 3本線が×に
 ===================================*/
-/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+/* ボタン外側 */
 .openbtn1{
   position: relative;/*ボタン内側の基点となるためrelativeを指定*/
-  background:#57a2c7;
+  background:#fff;
   cursor: pointer;
-    width: 50px;
-    height:50px;
-  border-radius: 5px;
+  width: 50px;
+  height: 50px;
 }
 
 /*ボタン内側*/
@@ -628,30 +651,30 @@ jQueryの指定(PC)
   display: inline-block;
   transition: all .4s;/*アニメーションの設定*/
   position: absolute;
-  left: 14px;
+  right: 0px;
   height: 3px;
   border-radius: 2px;
-background: #fff;
+  background: #468459;
   width: 45%;
 }
 
 .openbtn1 span:nth-of-type(1) {
-top:15px; 
+  top:15px; 
 }
 
 .openbtn1 span:nth-of-type(2) {
-top:23px;
+  top:23px;
 }
 
 .openbtn1 span:nth-of-type(3) {
-top:31px;
+  top:31px;
 }
 
 /*activeクラスが付与されると線が回転して×に*/
 
 .openbtn1.active span:nth-of-type(1) {
   top: 18px;
-  left: 18px;
+  right: 18px;
   transform: translateY(6px) rotate(-45deg);
   width: 30%;
 }
@@ -668,12 +691,9 @@ opacity: 0;/*真ん中の線は透過*/
 }
 
   /* carousel */
-  .carousel__container-pc {
-    display: none;
-  }
-
-  .carousel__img-sp {
-    margin-left: auto;
+  .carousel__box {
+    top: 70px;
+    left: 10px;
   }
   
   /* news */
