@@ -695,6 +695,11 @@ opacity: 0;/*真ん中の線は透過*/
     top: 70px;
     left: 10px;
   }
+
+  .carousel__img-sp {
+    margin-left: auto;
+  }
+  
   
   /* news */
   .news__box-outer {

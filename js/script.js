@@ -28,8 +28,8 @@ $(function() {
     });
 
   // ハンバーガーメニュー
-  $('.js-humberger').on('click', function(){
-    $('.js-humberger, .nav-sp').toggleClass('show');
+  $('.openbtm1').on('click', function(){
+    $('.openbtn1, .header__nav-pc').toggleClass('show');
   })
 
   $(".openbtn1").click(function () {
