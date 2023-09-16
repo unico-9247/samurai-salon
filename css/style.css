@@ -187,7 +187,7 @@
   border-radius: 10px;
 }
 
-.header__nav-btn > .nav__link {
+.header__nav-btn > .header__nav-link {
   padding: 15px;
 }
 
@@ -619,6 +619,10 @@ jQueryの指定(PC)
     position: relative;
     width: 100%;
     background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
   }
 
   .header__outer {
@@ -632,6 +636,14 @@ jQueryの指定(PC)
   .header__nav-list {
     color: #000;
   }
+
+  .header__nav-btn {
+    color: #fff;
+    background-color: #0C4324;
+    width: 100%;
+  }
+
+  
 
 
   /*==================================================
