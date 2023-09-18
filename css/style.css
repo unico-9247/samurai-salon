@@ -616,17 +616,26 @@ jQueryの指定(PC)
 
   /* header */
   .header {
-    position: relative;
-    width: 100%;
-    background-color: #fff;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-  }
+    background-color: #FFFFFF;
+  } 
 
   .header__outer {
     flex-direction: column;
+  }
+
+  .header__nav {
+    position: fixed;
+    z-index: 999;
+    top: -120%;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    transition: all 0.6s;
+  }
+
+  .header__nav.panelactive {
+    top: 0;
   }
 
   .header__nav-menu {
@@ -643,64 +652,61 @@ jQueryの指定(PC)
     width: 100%;
   }
 
-  
-
-
   /*==================================================
-　5-2-1 3本線が×に
-===================================*/
-/* ボタン外側 */
-.openbtn1{
-  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
-  background:#fff;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-}
+  　5-2-1 3本線が×に
+  ===================================*/
+  /* ボタン外側 */
+  .openbtn{
+    position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+    background:#fff;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
 
-/*ボタン内側*/
-.openbtn1 span{
-  display: inline-block;
-  transition: all .4s;/*アニメーションの設定*/
-  position: absolute;
-  right: 0px;
-  height: 3px;
-  border-radius: 2px;
-  background: #468459;
-  width: 45%;
-}
+  /*ボタン内側*/
+  .openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    right: 0px;
+    height: 3px;
+    border-radius: 2px;
+    background: #468459;
+    width: 45%;
+  }
 
-.openbtn1 span:nth-of-type(1) {
-  top:15px; 
-}
+  .openbtn span:nth-of-type(1) {
+    top:15px; 
+  }
 
-.openbtn1 span:nth-of-type(2) {
-  top:23px;
-}
+  .openbtn span:nth-of-type(2) {
+    top:23px;
+  }
 
-.openbtn1 span:nth-of-type(3) {
-  top:31px;
-}
+  .openbtn span:nth-of-type(3) {
+    top:31px;
+  }
 
-/*activeクラスが付与されると線が回転して×に*/
+  /*activeクラスが付与されると線が回転して×に*/
 
-.openbtn1.active span:nth-of-type(1) {
-  top: 18px;
-  right: 18px;
-  transform: translateY(6px) rotate(-45deg);
-  width: 30%;
-}
+  .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    right: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
 
-.openbtn1.active span:nth-of-type(2) {
-opacity: 0;/*真ん中の線は透過*/
-}
+  .openbtn.active span:nth-of-type(2) {
+  opacity: 0;/*真ん中の線は透過*/
+  }
 
-.openbtn1.active span:nth-of-type(3){
-  top: 30px;
-  left: 18px;
-  transform: translateY(-6px) rotate(45deg);
-  width: 30%;
-}
+  .openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
 
   /* carousel */
   .carousel__box {

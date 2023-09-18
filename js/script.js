@@ -28,12 +28,18 @@ $(function() {
     });
 
   // ハンバーガーメニュー
-  $('.openbtm1').on('click', function(){
-    $('.openbtn1, .header__nav-pc').toggleClass('show');
-  })
-
-  $(".openbtn1").click(function () {
+  $(".openbtn").click(function () {
     $(this).toggleClass('active');
+    $("header__nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+  });
+
+  $(".header__nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+    $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
+    $(".header__nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
 });
 
 });
+
+
+
+
